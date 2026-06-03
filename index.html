@@ -7,10 +7,12 @@
   .header{border-bottom:2px solid var(--color-text-primary);padding-bottom:1rem;margin-bottom:1.2rem}
   .name{font-family:'DM Serif Display',serif;font-size:32px;font-weight:400;letter-spacing:-0.5px;line-height:1.1}
   .title{font-size:13px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--color-text-secondary);margin-top:4px}
-  .contact{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:10px;font-size:12px;color:var(--color-text-secondary)}
+  .contact{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:12px;color:var(--color-text-secondary)}
   .contact a{color:var(--color-text-secondary);text-decoration:none}
   .contact a:hover{color:var(--color-text-primary)}
-  .dot::before{content:'·';margin-right:0;opacity:0.5}
+  .contact-item{display:inline-flex;align-items:center;gap:5px}
+  .contact-icon{width:12px;height:12px;flex-shrink:0;opacity:0.7}
+  .dot::before{content:'·';margin-right:0;opacity:0.4}
   .section{margin-bottom:1.3rem}
   .section-title{font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--color-text-secondary);border-bottom:0.5px solid var(--color-border-secondary);padding-bottom:4px;margin-bottom:0.9rem}
   .job{margin-bottom:1.1rem}
@@ -34,7 +36,21 @@
   .edu-school{font-size:12.5px;color:var(--color-text-secondary);margin-top:2px;margin-bottom:0.9rem}
   .print-btn{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:6px 14px;border:0.5px solid var(--color-border-secondary);border-radius:6px;background:transparent;color:var(--color-text-secondary);cursor:pointer;margin-bottom:1.5rem;font-family:inherit}
   .print-btn:hover{background:var(--color-background-secondary);color:var(--color-text-primary)}
-  @media print{.print-btn{display:none}.page{padding:0}}
+  @media print{.print-btn{display:none}.page{padding:0}.dot{display:inline!important}}
+  @media(max-width:600px){
+    .page{padding:1.5rem 1.25rem}
+    .name{font-size:24px}
+    .contact{flex-direction:column;gap:5px}
+    .dot{display:none}
+    .job-header{flex-direction:column;gap:2px}
+    .job-meta{flex-wrap:wrap}
+    .edu-row{flex-direction:column;gap:2px}
+    .skills-grid{grid-template-columns:1fr 1fr}
+    .print-btn{font-size:11px;padding:5px 11px}
+  }
+  @media(max-width:420px){
+    .skills-grid{grid-template-columns:1fr}
+  }
 </style>
 <div class="page">
   <button class="print-btn" onclick="window.print()">⎙ Print / Save as PDF</button>
@@ -43,13 +59,25 @@
     <div class="name">Teerayut Panyoheang</div>
     <div class="title">Frontend Developer &amp; Supervisor</div>
     <div class="contact">
-      <span>Bangkok (relocating)</span>
+      <span class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6c0 3.75 4.5 8.5 4.5 8.5S12.5 9.75 12.5 6c0-2.485-2.015-4.5-4.5-4.5z"/><circle cx="8" cy="6" r="1.5"/></svg>
+        Bangkok (relocating)
+      </span>
       <span class="dot"></span>
-      <a href="mailto:Teerayut.p2710@gmail.com">Teerayut.p2710@gmail.com</a>
+      <span class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="3.5" width="13" height="9" rx="1"/><path d="M1.5 5.5l6.5 4 6.5-4"/></svg>
+        <a href="mailto:Teerayut.p2710@gmail.com">Teerayut.p2710@gmail.com</a>
+      </span>
       <span class="dot"></span>
-      <span>(+66) 824 740 430</span>
+      <span class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2h2.5l1 3-1.75 1.25c.9 1.8 2 2.9 3.75 3.75L9.75 8.5 13 9.5v2.5c0 .5-.75 1.5-2 1C4 11 1 5 1.5 4 2 3 2.5 2 3 2z"/></svg>
+        (+66) 824 740 430
+      </span>
       <span class="dot"></span>
-      <a href="https://github.com/TeerayutP" target="_blank">github.com/TeerayutP</a>
+      <span class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        <a href="https://github.com/TeerayutP" target="_blank">github.com/TeerayutP</a>
+      </span>
     </div>
   </div>
 
