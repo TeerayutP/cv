@@ -73,7 +73,7 @@ def job_header(doc, title, company, date, badge=None, desc=None):
 doc = Document()
 
 section = doc.sections[0]
-section.top_margin    = Inches(0.75)
+section.top_margin    = Inches(1.1)
 section.bottom_margin = Inches(0.75)
 section.left_margin   = Inches(0.85)
 section.right_margin  = Inches(0.85)
