@@ -91,7 +91,7 @@ run(p, 'Teerayut Panyoheang', size=26, name='Georgia')
 
 p = doc.add_paragraph()
 spacing(p, before=0, after=4)
-run(p, 'FRONTEND DEVELOPER & SUPERVISOR', size=8.5, rgb=SECONDARY)
+run(p, 'FULL-STACK DEVELOPER', size=8.5, rgb=SECONDARY)
 
 p = doc.add_paragraph()
 spacing(p, before=0, after=0)
