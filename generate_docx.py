@@ -135,10 +135,10 @@ for b in [
 
 job_header(doc, 'Frontend Developer', 'XENOptics Ltd.', 'Sep 2020 – Feb 2025', desc=COMPANY_DESC)
 for b in [
-    'Took on full backend ownership during a period without a dedicated backend developer — maintained a legacy PHP codebase and a Lumen API to keep production running without interruption.',
     'Built and maintained an Angular SPA for fiber patching software (Angular Material), serving a network dashboard managing 2,000+ fiber connections and devices.',
     'Developed a React-based NMS (Network Management System) SPA with HeroUI and Tailwind customization.',
     'Customised 15+ HeroUI components with a unified theme — structured as an atomic component library reused across 2 products, ensuring consistent UI with minimal duplication.',
+    'Took on full backend ownership during a period without a dedicated backend developer — maintained a legacy PHP codebase and a Lumen API to keep production running without interruption.',
     'Designed and implemented RESTful APIs with FastAPI: JWT auth, role-based permissions, and business logic in MySQL stored procedures.',
     'Collaborated closely with the hardware production team — adapted frontend features to meet evolving hardware requirements and kept the software pipeline aligned with physical production workflows.',
     'Contributed Python code for robot machine-state management; built an internal web interface for debugging and configuring robotic arms.',
