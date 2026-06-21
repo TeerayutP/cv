@@ -73,10 +73,11 @@ def job_header(doc, title, company, date, badge=None, desc=None):
 doc = Document()
 
 section = doc.sections[0]
-section.top_margin    = Inches(1.1)
-section.bottom_margin = Inches(0.75)
-section.left_margin   = Inches(0.85)
-section.right_margin  = Inches(0.85)
+section.top_margin      = Inches(1.0)
+section.bottom_margin   = Inches(0.75)
+section.left_margin     = Inches(0.85)
+section.right_margin    = Inches(0.85)
+section.header_distance = Inches(0.3)
 
 # Remove default paragraph spacing from Normal style
 doc.styles['Normal'].paragraph_format.space_after  = Pt(0)
@@ -85,7 +86,7 @@ doc.styles['Normal'].paragraph_format.space_before = Pt(0)
 # ── Header ────────────────────────────────────────────────────────────────────
 
 p = doc.add_paragraph()
-spacing(p, before=0, after=2)
+spacing(p, before=10, after=2)
 run(p, 'Teerayut Panyoheang', size=26, name='Georgia')
 
 p = doc.add_paragraph()
