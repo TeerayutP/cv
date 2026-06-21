@@ -100,6 +100,9 @@
     .edu-row    { display:flex; flex-direction:column; gap:2px; }
     .edu-degree { font-size:0.93rem; font-weight:500; }
     .edu-school { font-size:0.83rem; color:var(--color-text-secondary); margin-top:2px; margin-bottom:0.9rem; }
+    .company-desc { font-size:0.67rem; color:var(--color-text-secondary); margin-bottom:6px; }
+    .project-url { font-size:0.83rem; color:var(--color-text-secondary); text-decoration:none; transition:color 0.15s; }
+    .project-url:hover { color:var(--color-text-primary); }
 
     /* ── Print button ────────────────────────────────────── */
     .print-btn       { display:inline-flex; align-items:center; gap:6px; font-size:0.67rem; padding:5px 11px; border:0.5px solid var(--color-border-secondary); border-radius:6px; background:transparent; color:var(--color-text-secondary); cursor:pointer; margin-bottom:1.5rem; font-family:inherit; transition:background 0.15s, color 0.15s; }
@@ -166,7 +169,7 @@
 
     <div class="section">
       <div class="section-title">Profile</div>
-      <p class="summary">Full-stack developer with 5+ years growing into the whole stack the hard way — starting as a frontend engineer, then stepping up to cover backend twice when developers left, until full-stack ownership became the permanent arrangement. I work in an R&D environment where software meets hardware, which means shipping real features, coordinating across departments, and keeping production running without a dedicated backend team. Now leading the frontend team as supervisor while still owning both the React and FastAPI sides of the stack.</p>
+      <p class="summary">Full-stack developer with 5+ years at XENOptics, an R&D company building robotics to automate high-density fiber optic patching. Started as a frontend engineer and grew into owning the full stack — stepped up twice when backend developers left, until full-stack became the permanent arrangement with no dedicated backend. Ship across React, Angular, FastAPI, and MySQL in a hardware-software environment, coordinate across R&D departments, and currently mentor two junior developers. Looking for a focused full-stack engineering role in Bangkok.</p>
     </div>
 
     <div class="section">
@@ -181,8 +184,9 @@
             <span>Feb 2025 – Present</span>
           </div>
         </div>
+        <div class="company-desc">R&amp;D company developing robotics to automate high-density fiber optic patching &nbsp;·&nbsp; 8-person software team &nbsp;·&nbsp; 30+ R&amp;D</div>
         <ul>
-          <li>Lead sprint planning and weekly task breakdowns for the frontend team, keeping delivery aligned with product milestones across multiple live projects.</li>
+          <li>Lead sprint planning and weekly task breakdowns for a 2-person frontend team, keeping delivery aligned with product milestones across multiple live projects.</li>
           <li>Refactored a proprietary monolithic application into a modular architecture — cut new engineer onboarding time significantly.</li>
           <li>Delivered a full-stack private portal for role-based fiber management — React frontend, FastAPI APIs, and MySQL data.</li>
           <li>Bootstrapped a logistics &amp; shipment web app — set up the React project structure, SPA routing, and reusable component foundation for the team to build on.</li>
@@ -199,6 +203,7 @@
             <span>Sep 2020 – Feb 2025</span>
           </div>
         </div>
+        <div class="company-desc">R&amp;D company developing robotics to automate high-density fiber optic patching &nbsp;·&nbsp; 8-person software team &nbsp;·&nbsp; 30+ R&amp;D</div>
         <ul>
           <li>Built and maintained an Angular SPA for fiber patching software (Angular Material), serving a network dashboard managing 2,000+ fiber connections and devices.</li>
           <li>Developed a React-based NMS (Network Management System) SPA with HeroUI and Tailwind customization.</li>
@@ -273,6 +278,21 @@
             <span class="tag">pytest</span><span class="tag">Unit Testing</span><span class="tag">Integration Testing</span>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Projects</div>
+      <div class="job">
+        <div class="job-header">
+          <span class="job-title">Bookmarker</span>
+          <div class="job-meta">
+            <a class="project-url" href="https://bookmarker-dun-three.vercel.app" target="_blank">bookmarker-dun-three.vercel.app</a>
+          </div>
+        </div>
+        <ul>
+          <li>Personal project — deployed on Vercel.</li>
+        </ul>
       </div>
     </div>
 
